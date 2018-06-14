@@ -11,31 +11,31 @@ We used FlowScope commit version *7beb980* and it can be found [here](https://gi
 
   1. Clone [FlowScope](https://github.com/pudelkoM/FlowScope):
 
-    ```shell
+    ```sh
       $ git clone --recursive https://github.com/pudelkoM/FlowScope
       $ git checkout 7beb980
       $ # follow instructions in the FlowScope readme
     ```
   1. Clone [this repository](https://github.com/sn0cr/flowscope-tcp-rtt-analysis):
 
-    ```shell
+    ```sh
       $ git clone https://github.com/sn0cr/flowscope-tcp-rtt-analysis.git
     ```
   1. Install FlowScope:
 
-    ```shell
+    ```sh
       $ cd FlowScope
       $ # follow instructions in the FlowScope Readme
     ```
   1. Create a 'json' and 'pcaps' folder to store the results:
 
-    ```shell
+    ```sh
       $ mkdir json
       $ mkdir pcaps
     ```
   1. Run Flowscope:
 
-    ```shell
+    ```sh
       $ ./libmoon/build/libmoon lua/flowscope.lua --path ./pcaps ../flowscope-tcp-rtt-analysis/src/TCPRTTTimeAnalysis_avg_w_seq.lua 0
     ```
 
