@@ -1,5 +1,44 @@
 # flowscope-tcp-rtt-analysis
-Use [FlowScope]{https://github.com/pudelkoM/FlowScope} to analyse the RTT of TCP flows
+Use [FlowScope](https://github.com/pudelkoM/FlowScope) to analyse the RTT of TCP flows
+
+## About used software
+We used FlowScope commit version *7beb980* and it can be found [here](https://github.com/pudelkoM/FlowScope). To use the same version as during the development of this module, run (after cloning the repository):
+```sh
+  $ git checkout 7beb980
+```
+
+# Usage
+
+  1. Clone [FlowScope](https://github.com/pudelkoM/FlowScope):
+
+    ```shell
+      $ git clone --recursive https://github.com/pudelkoM/FlowScope
+      $ git checkout 7beb980
+      $ # follow instructions in the FlowScope readme
+    ```
+  1. Clone [this repository](https://github.com/sn0cr/flowscope-tcp-rtt-analysis):
+
+    ```shell
+      $ git clone https://github.com/sn0cr/flowscope-tcp-rtt-analysis.git
+    ```
+  1. Install FlowScope:
+
+    ```shell
+      $ cd FlowScope
+      $ # follow instructions in the FlowScope Readme
+    ```
+  1. Create a 'json' and 'pcaps' folder to store the results:
+
+    ```shell
+      $ mkdir json
+      $ mkdir pcaps
+    ```
+  1. Run Flowscope:
+
+    ```shell
+      $ ./libmoon/build/libmoon lua/flowscope.lua --path ./pcaps ../flowscope-tcp-rtt-analysis/src/TCPRTTTimeAnalysis_avg_w_seq.lua 0
+    ```
+
 
 # Licence (MIT License)
 
