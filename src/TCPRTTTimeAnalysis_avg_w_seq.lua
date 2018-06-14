@@ -44,7 +44,7 @@ module.number_of_sequences = 11
 -- the state type can only be 128B in size! (see the hmap.lua in flowscope/lua folder)
 
 ffi.cdef [[
-    struct timestamped_tumple {
+    struct timestamped_tuple {
         uint32_t sequence_number;
         uint32_t timestamp;
     };
@@ -63,7 +63,7 @@ ffi.cdef [[
         // each struct is 8B
         // => 128B - 34B=94B
         // => 94B / 8B= 11.75 => 11 Sequences
-        struct timestamped_tumple rtts[11];
+        struct timestamped_tuple rtts[11];
     };
 ]]
 
