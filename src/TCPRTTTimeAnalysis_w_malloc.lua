@@ -62,7 +62,6 @@ ffi.cdef [[
         uint32_t max_rtt;
         uint32_t min_rtt;
         uint8_t tracked;
-        uint8_t rtt_index;
         struct List_node* seq_list;
         struct List_node* ack_list;
         struct RTT_List* rtts;
