@@ -33,10 +33,16 @@ We used FlowScope commit version *7beb980* and it can be found [here](https://gi
       $ mkdir json
       $ mkdir pcaps
     ```
-  1. Run Flowscope:
+  1. Run FlowScope with the limited 11 sequence number storage:
 
     ```sh
       $ ./libmoon/build/libmoon lua/flowscope.lua --path ./pcaps ../flowscope-tcp-rtt-analysis/src/TCPRTTTimeAnalysis_avg_w_seq.lua 0
+    ```
+
+  1. Or run FlowScope with the malloc approach:
+
+    ```sh
+      $ ./libmoon/build/libmoon lua/flowscope.lua --path ./pcaps ../flowscope-tcp-rtt-analysis/src/TCPRTTTimeAnalysis_w_malloc.lua 0
     ```
 
 
